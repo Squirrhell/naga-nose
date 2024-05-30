@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  width: 200px;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+p {
+  font-size: 14px;
+}
+
+input[type=number] {
+  width: 150px; 
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+
+
+.onoffswitch {
+  position: relative; width: 66px;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.onoffswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  border: 2px solid #000000; border-radius: 20px;
+}
+.onoffswitch-inner {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+  font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "DEL";
+  padding-left: 10px;
+  background-color: #DB4437; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+  content: "ADD";
+  padding-right: 10px;
+  background-color: #0F9D58; color: #FFFFFF;
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block; width: 13px; margin: 3.5px;
+  background: #FFFFFF;
+  position: absolute; top: 0; bottom: 0;
+  right: 42px;
+  border: 2px solid #000000; border-radius: 20px;
+  transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px; 
+}
+
+
+
+.sleepswitch {
+  position: relative; width: 75px; float: right;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.sleepswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.sleepswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  border: 2px solid #000000; border-radius: 20px;
+}
+.sleepswitch-inner {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.sleepswitch-inner:before, .sleepswitch-inner:after {
+  display: block; float: left; width: 50%; height: 15px; padding: 0; line-height: 15px;
+  font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+  box-sizing: border-box;
+}
+.sleepswitch-inner:before {
+  content: "SLEEPING";
+  padding-left: 5px;
+  background-color: #4285F4; color: #FFFFFF;
+}
+.sleepswitch-inner:after {
+  content: "FECTHING";
+  padding-right: 5px;
+  background-color: #F4B400; color: #FFFFFF;
+  text-align: right;
+}
+.sleepswitch-switch {
+  display: block; width: 5px; margin: 5px;
+  background: #FFFFFF;
+  position: absolute; top: 0; bottom: 0;
+  right: 56px;
+  border: 2px solid #000000; border-radius: 20px;
+  transition: all 0.3s ease-in 0s; 
+}
+.sleepswitch-checkbox:checked + .sleepswitch-label .sleepswitch-inner {
+  margin-left: 0;
+}
+.sleepswitch-checkbox:checked + .sleepswitch-label .sleepswitch-switch {
+  right: 0px; 
+}

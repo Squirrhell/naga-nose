@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Naga Nose</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="sleepswitch">
+    <input type="checkbox" name="sleepswitch" class="sleepswitch-checkbox" id="isSleeping" tabindex="0">
+    <label class="sleepswitch-label" for="isSleeping">
+        <span class="sleepswitch-inner"></span>
+        <span class="sleepswitch-switch"></span>
+    </label>
+  </div>
+  </br>
+  <h1>Naga Nose   <img src="/icons/icon48.png"></h1>
+  <p>Select an item :</p>
+  <form id="item_form">
+    <input placeholder="Item ID" type="number" id="item_id" min="1" required>
+    <input placeholder="Enhancement Level" type="number" id="item_enhan_lvl" min="0" max="20">
+    </br></br>
+    <div class="onoffswitch">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="item_add_del" tabindex="0">
+      <label class="onoffswitch-label" for="item_add_del">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+      </label>
+    </div>
+    </br>
+    <button type="submit">OK</button>
+  </form>
+  <p id="status"></p>
+  <p id="current_item_list"></p>
+  <script src="popup.js"></script>
+</body>
+</html>
