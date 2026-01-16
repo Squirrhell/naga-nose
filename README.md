@@ -14,8 +14,8 @@ There are differents steps to set up *"Naga Nose"* on your Chromium Browser.
 - Enjoy using *"Naga Nose"*
 
 # How to use
-To add an item to the list you only have to write its ID (and enhancement level if needed (from 0 to 20)) and press the OK button.
+To add an item to the list you only have to go in the Search window, write its name, and click on the item you want (and enhancement level if needed (from 0 to 20)).
 
-To delete an item, it's the same actions but you need to check the delete checkbox.
+To delete an item, you just have to click on the cross in your items' list.
 
 In case you want Naga to stop looking at the market you can put it to "sleep mode" with the top right switch. When Naga will be back watching the market it will notify you if an item got listed while it was sleeping.
