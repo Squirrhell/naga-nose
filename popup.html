@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Naga Nose</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    section { display: none; }
+    section.active { display: block; }
+    .nav-menu {
+      margin: 10px 0;
+      display: flex;
+      gap: 10px;
+    }
+    .nav-menu button {
+      padding: 8px 16px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .nav-menu button.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="sleepswitch">
@@ -14,23 +35,63 @@
   </div>
   </br>
   <h1>Naga Nose   <img src="/icons/icon48.png"></h1>
-  <p>Select an item :</p>
-  <form id="item_form">
-    <input placeholder="Item ID" type="number" id="item_id" min="1" required>
-    <input placeholder="Enhancement Level" type="number" id="item_enhan_lvl" min="0" max="20">
-    </br></br>
-    <div class="onoffswitch">
-      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="item_add_del" tabindex="0">
-      <label class="onoffswitch-label" for="item_add_del">
-          <span class="onoffswitch-inner"></span>
-          <span class="onoffswitch-switch"></span>
-      </label>
+
+  <!-- Navigation Menu -->
+  <div class="nav-menu" id="nav-menu">
+    <button data-page="page1" class="nav-btn active">My Items</button>
+    <button data-page="page2" class="nav-btn">Search</button>
+  </div>
+
+  <!-- Page 1: Items List -->
+  <section id="page1" class="active">
+    <p>Your items :</p>
+    <p id="current_item_list"></p>
+  </section>
+
+  <!-- Page 2: Search -->
+  <section id="page2">
+    <p>Search an item :</p>
+    <div id="search_form_container">
+      <input placeholder="Item name" type="text" id="search_item_name">
+      <button id="search_btn">Search</button>
     </div>
-    </br>
-    <button type="submit">OK</button>
-  </form>
-  <p id="status"></p>
-  <p id="current_item_list"></p>
+    <p id="search_status"></p>
+    <p id="search_item_list"></p>
+  </section>
+
+  <!-- Page 3: Add Item Form -->
+  <section id="page3">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button id="back_to_search" style="background: none; border: none; font-size: 24px; cursor: pointer;">&larr;</button>
+      <br>
+      <p>Add selected item :</p>
+    </div>
+    <form id="item_form">
+      <label for="item_name">Name:</label>
+      <input placeholder="Item Name" type="text" id="item_name" readonly>
+      </br></br>
+      
+      <label for="item_id">ID:</label>
+      <input placeholder="Item ID" type="number" id="item_id" min="1" required readonly>
+      </br></br>
+      
+      <label for="item_enhan_lvl">Enhancement Level:</label>
+      <input placeholder="Enhancement Level" type="number" id="item_enhan_lvl" min="0" max="20">
+      </br></br>
+      
+      <div class="onoffswitch" hidden>
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="item_add_del" tabindex="0">
+        <label class="onoffswitch-label" for="item_add_del">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+      </div>
+      </br>
+      <button type="submit">OK</button>
+    </form>
+    <p id="status"></p>
+  </section>
+
   <script src="popup.js"></script>
 </body>
 </html>
